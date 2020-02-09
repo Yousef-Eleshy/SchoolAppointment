@@ -1,0 +1,1853 @@
+<odoo>
+	<data>
+		<record id="Appointment_page" model="ir.ui.view">
+			<field name="priority">99</field>
+			<field name="name">Appointment_page</field>
+			<field name="inherit_id" ref="website_calendar.appointment_form"/>
+			<field name="website_id" search="[('name', 'like', 'My Website')]" model="website"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[@id='wrap']" position="replace">
+					<!-- CSS and JavaScript Imports -->
+					<link rel="stylesheet" href="/websit_appointment/static/css/main.css"/>
+					<link rel="stylesheet" href="/websit_appointment/static/css/style.css"/>
+					
+			<!-- 		<script type="text/javascript" src="/websit_appointment/static/js/javascript.js"></script> -->
+					<div id="wrapper">
+
+						<!-- Header -->
+						<div class="stm-page-head stm-page-head_size_small stm-page-head_color_white"
+								 style="background-image: url(https://utopiais.com/wp-content/uploads/2019/11/Utopia-Cover1.jpg)">
+
+							<div class="container">
+									<div class="stm-page-head__content">
+											<h1 class="stm-page-head__title ">Online Application</h1>
+
+											<div class="stm-page-head__separator">
+													<div class="stm-page-head__separator-line"></div><!-- /.header-holder -->
+											</div>
+
+									</div>
+							</div>
+
+							<div class="stm-page-head__overlay"></div>
+						</div>
+						<!-- Header Ends-->
+
+						<div class="content content_type_vc">
+							<div class="container">
+								<main class="main">
+									<article class="post-2 page type-page status-publish hentry" id="post-2">
+										<div class="entry-content">
+							<div class="vc_row wpb_row vc_row-fluid vc_custom_1562711373966"
+									 style="left: -12.89px; width: 776px; padding-right: 13.11px; padding-left: 12.89px; position: relative; box-sizing: border-box;"
+									 data-vc-full-width="true" data-vc-full-width-init="true">
+								<div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-12 vc_col-md-12 vc_col-xs-12">
+									<div class="vc_column-inner">
+										<div class="wpb_wrapper">
+												
+												<div class="stm-separator stm-clearfix stm-separator_type_title">
+														<div class="stm-separator__line stm-border-b_color_dark-blue"></div>
+												</div>
+				<div class="wpforms-container wpforms-container-full wpforms-form-abandonment"
+						 id="wpforms-4201">
+                    <!-- Submit to pass data to controller via POST method -->
+						<form class="wpforms-validate wpforms-form appointment_submit_form"
+								id="wpforms-form-4201"
+								t-attf-action="/website/calendar/#{ slug(appointment_type) }/submit" method="POST"
+								enctype="multipart/form-data" 
+								 data-formid="4201"
+
+								 novalidate="novalidate">
+								<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                      <input type="hidden" name="datetime_str" t-att-value="datetime_str" required="1"/>
+                      <input type="hidden" name="employee_id" t-att-value="employee_id" required="1"/>
+							<div class="wpforms-page-indicator none"
+									 data-indicator-color="#81ca00"
+									 data-indicator="none"></div>
+<!--page1-->                            
+<div class="wpforms-field-container">
+<div class="wpforms-page wpforms-page-1 errorMsg">
+		<div class="wpforms-field wpforms-field-pagebreak"
+				 id="wpforms-4201-field_16-container"
+				 data-field-id="16"></div>
+		<div class="wpforms-field wpforms-field-radio wpforms-list-inline"
+				 id="wpforms-4201-field_14-container"
+				 data-field-id="14">
+				<label class="wpforms-field-label"
+							 for="wpforms-4201-field_14">
+						Please Choose, Are You
+						<span class="wpforms-required-label">
+								*
+						</span>
+				</label>
+				<ul class="wpforms-field-required wpforms-image-choices wpforms-image-choices-modern"
+						id="wpforms-4201-field_14">
+						<li class="choice-1 depth-1 wpforms-image-choices-item">
+								<label class="wpforms-field-label-inline"
+											 for="wpforms-4201-field_14_1">
+										<span class="wpforms-image-choices-image">
+												<img title="Father"
+														 alt="Father"
+														 src="https://utopiais.com/wp-content/uploads/2019/07/Father.png"/>
+										</span>
+										<input name="father"
+													 class="wpforms-screen-reader-element"
+													 id="wpforms-4201-field_14_1"
+													 required=""
+													 type="radio"
+													 value="Father"/>
+										<span class="wpforms-image-choices-label">
+												Father
+										</span>
+								</label>
+						</li>
+						<li class="choice-2 depth-1 wpforms-image-choices-item">
+								<label class="wpforms-field-label-inline"
+											 for="wpforms-4201-field_14_2">
+										<span class="wpforms-image-choices-image">
+												<img title="Mother"
+														 alt="Mother"
+														 src="https://utopiais.com/wp-content/uploads/2019/07/Mother.png"/>
+										</span>
+										<input name="mother"
+													 class="wpforms-screen-reader-element"
+													 id="wpforms-4201-field_14_2"
+													 required="1"
+													 type="radio"
+													 value="Mother"/>
+										<span class="wpforms-image-choices-label">
+												Mother
+										</span>
+								</label>
+						</li>
+				</ul>
+		</div>
+		<div class="wpforms-field wpforms-field-name"
+				 id="wpforms-4201-field_141-container"
+				 data-field-id="141">
+				<label class="wpforms-field-label"
+							 for="wpforms-4201-field_141">Name
+						<span class="wpforms-required-label">
+								*
+						</span>
+				</label>
+				<div class="wpforms-field-row wpforms-field-medium">
+						<div class="wpforms-field-row-block wpforms-first wpforms-one-half">
+								<input name="name"
+											 class="wpforms-field-name-first wpforms-field-required"
+											 id="wpforms-4201-field_141"
+											 type="text"
+											 required="required"/>
+								<label class="wpforms-field-sublabel before "
+											 for="wpforms-4201-field_141">
+										First
+								</label>
+						</div>
+						<div class="wpforms-field-row-block wpforms-one-half">
+								<input name="last"
+											 class="wpforms-field-name-last wpforms-field-required"
+											 id="wpforms-4201-field_141-last"
+											 required="1" type="text"/>
+								<label class="wpforms-field-sublabel before "
+											 for="wpforms-4201-field_141-last">
+										Last
+								</label>
+						</div>
+				</div>
+		</div>
+		
+		<div class="wpforms-field wpforms-field-email"
+				 id="wpforms-4201-field_142-container"
+				 data-field-id="142">
+				<label class="wpforms-field-label"
+							 for="wpforms-4201-field_142">
+						Email
+						<span class="wpforms-required-label">
+								*
+						</span>
+				</label>
+				<div class="wpforms-field-row wpforms-field-medium">
+						<div class="wpforms-field-row-block wpforms-one-half wpforms-first">
+								<input name="email"
+											 class="wpforms-field-required wpforms-field-email-primary"
+											 id="wpforms-4201-field_142"
+											 required="1"
+											 type="email"/>
+								<label class="wpforms-field-sublabel before "
+											 for="wpforms-4201-field_142">
+										Email
+								</label>
+						</div>
+						<div class="wpforms-field-row-block wpforms-one-half">
+								<input name="confirm_email"
+											 class="wpforms-field-email-secondary wpforms-field-required"
+											 id="wpforms-4201-field_142-secondary"
+											 required="1" type="email"
+											 data-rule-confirm="#wpforms-4201-field_142"/>
+								<label class="wpforms-field-sublabel before "
+											 for="wpforms-4201-field_142-secondary">
+										Confirm Email
+								</label>
+						</div>
+				</div>
+		</div>
+		<div class="wpforms-field wpforms-field-phone"
+				 id="wpforms-4201-field_140-container"
+				 data-field-id="140">
+				
+				<label class="wpforms-field-label"
+							 for="wpforms-4201-field_140">
+						Mobile Number
+						<span class="wpforms-required-label">
+								*
+						</span>
+				</label>
+
+				<input name="phone"
+							 class="wpforms-field-phone wpforms-field-required"
+							 id="wpforms-4201-field_140-phone"
+							 required="1" type="tel"/>
+
+
+
+		</div>
+		
+		<div class="wpforms-field wpforms-field-pagebreak"
+				 id="wpforms-4201-field_48-container"
+				 data-field-id="48">
+				<div class="wpforms-clear wpforms-pagebreak-left">
+						<button class="wpforms-page-button wpforms-page-next"
+						id="page11"
+										data-formid="4201"
+										data-page="1"
+										type="button"
+										data-action="next">Next
+						</button>
+						
+						  
+				</div>
+		</div>
+</div>
+</div>
+<!--end-->
+				
+					<!--page2-->
+<div class="wpforms-page wpforms-page-2" style="display:none;">
+	 <button class="wpforms-page-button wpforms-page-next"
+						id="skip_42012"
+						data-formid="42012"
+						data-page="42012"
+						type="button"
+						data-action="skip">Skip
+		</button>
+          <div class="wpforms-field wpforms-field-radio wpforms-list-inline wpforms-conditional-trigger"
+               id="wpforms-4201-field_49-container"
+               data-field-id="49">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_49">
+                  Please Choose Educational System
+              </label>
+              <ul class="wpforms-image-choices wpforms-image-choices-modern"
+                  id="wpforms-4201-field_49">
+                  <li class="choice-1 depth-1 wpforms-image-choices-item">
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_49_1">
+                          <span class="wpforms-image-choices-image">
+                              <img title="American"
+                                   alt="American"
+                                   src="https://utopiais.com/wp-content/uploads/2019/07/American.jpg"/>
+                          </span>
+                          <input name="stu_education_system"
+                                 class="wpforms-screen-reader-element"
+                                 id="wpforms-4201-field_49_1"
+                                 type="radio"
+                                 value="American"
+                                 required="1"/>
+                          <span class="wpforms-image-choices-label">
+                              American
+                          </span>
+                      </label>
+                  </li>
+                  <li class="choice-2 depth-1 wpforms-image-choices-item">
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_49_2">
+                          <span class="wpforms-image-choices-image">
+                              <img title="British"
+                                   alt="British"
+                                   src="https://utopiais.com/wp-content/uploads/2019/07/British.jpg"/>
+                          </span>
+                          <input name="stu_education_system"
+                                 class="wpforms-screen-reader-element"
+                                 id="wpforms-4201-field_49_2"
+                                 type="radio"
+                                 value="British"
+                                 required="1"/>
+                          <span class="wpforms-image-choices-label">
+                              British
+                          </span>
+                      </label>
+                  </li>
+              </ul>
+          </div>
+          <div class="wpforms-field wpforms-field-select wpforms-conditional-field wpforms-conditional-hide"
+               id="wpforms-4201-field_138-container"
+               style="display: none;"
+               data-field-id="138">
+             	 <label class="wpforms-field-label"
+                     for="wpforms-4201-field_138">
+                  Grade Level
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <select name="wpforms[fields][138]"
+                      tabindex="-1"
+                      class="wpforms-field-small wpforms-field-required select2-hidden-accessible"
+                      id="wpforms-4201-field_138"
+                      aria-hidden="false" required="">
+                  <option disabled=""
+                          class="placeholder"
+                          selected="selected"
+                          value="">Select Grade
+                  </option>
+                  <option value="Pre School">Pre
+                      School
+                  </option>
+                  <option value="Pre-K">Pre-K</option>
+                  <option value="K">K</option>
+                  <option value="Grade 1">Grade 1
+                  </option>
+                  <option value="Grade 2">Grade 2
+                  </option>
+                  <option value="Grade 3">Grade 3
+                  </option>
+                  <option value="Grade 4">Grade 4
+                  </option>
+                  <option value="Grade 5">Grade 5
+                  </option>
+                  <option value="Grade 6">Grade 6
+                  </option>
+                  <option value="Grade 7">Grade 7
+                  </option>
+                  <option value="Grade 8">Grade 8
+                  </option>
+                  <option value="Grade 9">Grade 9
+                  </option>
+              </select>
+              <span class="select2 select2-container select2-container--default"
+                    style="width: 100px;" dir="ltr">
+                  <span class="selection">
+                      <span tabindex="0"
+                            class="select2-selection select2-selection--single"
+                            role="combobox"
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            aria-labelledby="select2-wpforms-4201-field_138-container">
+                          <!-- <span title="Select Grade"
+                                class="select2-selection__rendered"
+                                id="select2-wpforms-4201-field_138-container">
+                              Select Grade
+                          </span> -->
+                          <span class="select2-selection__arrow"
+                                role="presentation">
+                              <b role="presentation"></b>
+                          </span>
+                      </span>
+                  </span>
+                  <span class="dropdown-wrapper"
+                        aria-hidden="true"></span>
+              </span>
+          </div>
+            <div class="wpforms-field wpforms-field-select wpforms-conditional-field wpforms-conditional-hide"
+                         id="wpforms-4201-field_139-container"
+                         style="display: none;"
+                         data-field-id="139">
+                        <label class="wpforms-field-label"
+                               for="wpforms-4201-field_139">
+                            Grade Level
+                            <span class="wpforms-required-label">
+                                *
+                            </span>
+                        </label>
+                        <select name="wpforms[fields][139]"
+                                tabindex="-1"
+                                class="wpforms-field-small wpforms-field-required select2-hidden-accessible"
+                                id="wpforms-4201-field_139"
+                                aria-hidden="false" required="">
+                            <option disabled=""
+                                    class="placeholder"
+                                    selected="selected"
+                                    value="">Select Grade
+                            </option>
+                            <option value="Grade 9">Grade 9
+                            </option>
+                            <option value="Grade 10">Grade 10
+                            </option>
+                            <option value="Grade 11">Grade 11
+                            </option>
+                            <option value="Grade 12">Grade 12
+                            </option>
+                        </select>
+                        <span class="select2 select2-container select2-container--default"
+                              style="width: 100px;" dir="ltr">
+                            <span class="selection">
+                                <span tabindex="0"
+                                      class="select2-selection select2-selection--single"
+                                      role="combobox"
+                                      aria-expanded="false"
+                                      aria-haspopup="true"
+                                      aria-labelledby="select2-wpforms-4201-field_139-container">
+                                    <!-- <span title="Select Grade"
+                                          class="select2-selection__rendered"
+                                          id="select2-wpforms-4201-field_139-container">
+                                        Select Grade
+                                    </span> -->
+                                    <span class="select2-selection__arrow"
+                                          role="presentation">
+                                        <b role="presentation"></b>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="dropdown-wrapper"
+                                  aria-hidden="true"></span>
+                        </span>
+                    </div>
+          <div class="wpforms-field wpforms-field-divider"
+               id="wpforms-4201-field_40-container"
+               data-field-id="40">
+              <h3 id="wpforms-4201-field_40"
+                  name="wpforms[fields][40]">Student’s
+                  Information
+              </h3>
+          </div>
+          <div class="wpforms-field wpforms-field-name"
+               id="wpforms-4201-field_2-container"
+               data-field-id="2">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_2">
+                  Student Name
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <div class="wpforms-field-row wpforms-field-medium">
+                  <div class="wpforms-field-row-block wpforms-first wpforms-one-half">
+                      <input name="student_name"
+                             class="wpforms-field-name-first wpforms-field-required"
+                             id="wpforms-4201-field_2"
+                             required="" type="text"/>
+                      <label class="wpforms-field-sublabel before "
+                             for="wpforms-4201-field_2">
+                          First
+                      </label>
+                  </div>
+                  <div class="wpforms-field-row-block wpforms-one-half">
+                      <input name="student_last"
+                             class="wpforms-field-name-last wpforms-field-required"
+                             id="wpforms-4201-field_2-last"
+                             required="" type="text"/>
+                      <label class="wpforms-field-sublabel before "
+                             for="wpforms-4201-field_2-last">
+                          Last
+                      </label>
+                  </div>
+              </div>
+          </div>
+          <div class="wpforms-field wpforms-field-name"
+               id="wpforms-4201-field_55-container"
+               data-field-id="55">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_55">
+                  Student name in Arabic
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <input name="student_name_arabic"
+                     class="wpforms-field-medium wpforms-field-required"
+                     id="wpforms-4201-field_55"
+                     required="1" type="text"/>
+              <div class="wpforms-field-description">
+                  مطابق للإسم فى شهادة الميلاد
+              </div>
+          </div>
+          <div class="wpforms-field wpforms-field-date-time"
+               id="wpforms-4201-field_7-container"
+               data-field-id="7">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_7">Date
+                  of Birth
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <input name="student_date"
+                     class="wpforms-field-date-time-date wpforms-datepicker wpforms-field-required wpforms-field-small flatpickr-input"
+                     id="wpforms-4201-field_7"
+                     type="date" data-date-inline-picker="true"
+                     />
+          </div>
+          <div class="wpforms-field wpforms-field-text"
+               id="wpforms-4201-field_32-container"
+               data-field-id="32">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_32">
+                  Birthplace
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <input name="birthplace"
+                     class="wpforms-field-small wpforms-field-required"
+                     id="wpforms-4201-field_32"
+                     required="1" type="text"/>
+          </div>
+          <div class="wpforms-field wpforms-field-radio wpforms-list-inline"
+               id="wpforms-4201-field_6-container"
+               data-field-id="6">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_6">Gender
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <ul class="wpforms-field-required"
+                  id="wpforms-4201-field_6">
+                  <li class="choice-1 depth-1">
+                      <input name="gender"
+                             id="wpforms-4201-field_6_1"
+                             type="radio"
+                             value="Male"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_6_1">
+                          Male
+                      </label>
+                  </li>
+                  <li class="choice-2 depth-1">
+                      <input name="gender"
+                             id="wpforms-4201-field_6_2"
+                              type="radio"
+                             value="Female"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_6_2">
+                          Female
+                      </label>
+                  </li>
+              </ul>
+          </div>
+          <div class="wpforms-field wpforms-field-radio wpforms-list-inline wpforms-conditional-trigger"
+               id="wpforms-4201-field_54-container"
+               data-field-id="54">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_54">
+                  Nationality
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <ul class="wpforms-field-required"
+                  id="wpforms-4201-field_54">
+                  <li class="choice-1 depth-1">
+                      <input name="nationality"
+                             id="wpforms-4201-field_54_1"
+                             type="radio"
+                             value="Egyptian"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_54_1">
+                          Egyptian
+                      </label>
+                  </li>
+                  <li class="choice-2 depth-1">
+                      <input name="nationality"
+                             id="wpforms-4201-field_54_2"
+                             type="radio"
+                             value="non-Egyptian"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_54_2">
+                          non-Egyptian
+                      </label>
+                  </li>
+              </ul>
+          </div>
+          <div class="wpforms-field wpforms-field-text wpforms-conditional-field wpforms-conditional-hide"
+               id="wpforms-4201-field_31-container"
+               style="display: none;"
+               data-field-id="31">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_31">
+                  Student National ID (مطابق للرقم فى
+                  شهادة الميلاد)
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <input name="stu_address"
+
+                     class="wpforms-field-small wpforms-field-required wpforms-masked-input wpforms-masked-input"
+                     id="wpforms-4201-field_31"
+                     required="1" type="text"
+                     data-inputmask-mask="99999999999999"
+                     im-insert="true"
+                     />
+          </div>
+          <div class="wpforms-field wpforms-field-text wpforms-conditional-field wpforms-conditional-hide"
+               id="wpforms-4201-field_60-container"
+               style="display: none;"
+               data-field-id="60">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_60">
+                  Student Passport No.
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <input name="stu_passport"
+                     class="wpforms-field-small wpforms-field-required"
+                     id="wpforms-4201-field_60"
+                     required="1" type="text"/>
+          </div>
+          <div class="wpforms-field wpforms-field-address"
+               id="wpforms-4201-field_143-container"
+               data-field-id="143">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_143">
+                  Address
+              </label>
+              <div class="wpforms-field-row wpforms-field-medium">
+                  <div>
+                      <input name="address_line"
+                             class="wpforms-field-address-address1"
+                             id="wpforms-4201-field_143"
+                             type="text"
+                             required="1"/>
+                      <label class="wpforms-field-sublabel before "
+                             for="wpforms-4201-field_143">
+                          Address Line 1
+                      </label>
+                  </div>
+              </div>
+              <div class="wpforms-field-row wpforms-field-medium">
+                  <div class="wpforms-field-row-block wpforms-one-half wpforms-first">
+                      <input name="city"
+                             class="wpforms-field-address-city"
+                             id="wpforms-4201-field_143-city"
+                             type="text"
+                             required="1"/>
+                      <label class="wpforms-field-sublabel before "
+                             for="wpforms-4201-field_143-city">
+                          City
+                      </label>
+                  </div>
+                  <div class="wpforms-field-row-block wpforms-one-half">
+                      <input name="state"
+                             class="wpforms-field-address-state"
+                             id="wpforms-4201-field_143-state"
+                             type="text"
+                             required="1"/>
+                      <label class="wpforms-field-sublabel before "
+                             for="wpforms-4201-field_143-state">
+                          State / Province / Region
+                      </label>
+                  </div>
+              </div>
+          </div>
+          <div class="wpforms-field wpforms-field-radio wpforms-list-2-columns wpforms-conditional-trigger"
+               id="wpforms-4201-field_57-container"
+               data-field-id="57">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_57">
+                  Previous school / Nursery
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <ul class="wpforms-field-required"
+                  id="wpforms-4201-field_57">
+                  <li class="choice-1 depth-1">
+                      <input name="previous_school"
+                             id="wpforms-4201-field_57_1"
+                             required="1" type="radio"
+                             value="American"
+                             />
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_57_1">
+                          American
+                      </label>
+                  </li>
+                  <li class="choice-2 depth-1">
+                      <input name="previous_school"
+                             id="wpforms-4201-field_57_2"
+                             required="1" type="radio"
+                             value="British"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_57_2">
+                          British
+                      </label>
+                  </li>
+                  <li class="choice-3 depth-1">
+                      <input name="previous_school"
+                             id="wpforms-4201-field_57_3"
+                             required="1" type="radio"
+                             value="IB"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_57_3">
+                          IB
+                      </label>
+                  </li>
+                  <li class="choice-5 depth-1">
+                      <input name="previous_school"
+                             id="wpforms-4201-field_57_5"
+                             required="1" type="radio"
+                             value="National"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_57_5">
+                          National
+                      </label>
+                  </li>
+                  <li class="choice-4 depth-1">
+                      <input name="previous_school"
+                             id="wpforms-4201-field_57_4"
+                             required="1" type="radio"
+                             value="Other"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_57_4">
+                          Other
+                      </label>
+                  </li>
+              </ul>
+          </div>
+          <div class="wpforms-field wpforms-field-text wpforms-conditional-field wpforms-conditional-hide"
+               id="wpforms-4201-field_58-container"
+               style="display: none;"
+               data-field-id="58">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_58">
+                  Please Specify
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <input name="stu_specify"
+                     class="wpforms-field-small wpforms-field-required"
+                     id="wpforms-4201-field_58"
+                     required="1" type="text"/>
+          </div>
+          <div class="wpforms-field wpforms-field-radio wpforms-conditional-trigger"
+               id="wpforms-4201-field_59-container"
+               data-field-id="59">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_59">
+                  Second Language
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <ul class="wpforms-field-required"
+                  id="wpforms-4201-field_59">
+                  <li class="choice-1 depth-1">
+                      <input name="stu_second_lang"
+                             id="wpforms-4201-field_59_1"
+                             required="1" type="radio"
+                             value="French"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_59_1">
+                          French
+                      </label>
+                  </li>
+                  <li class="choice-2 depth-1">
+                      <input name="stu_second_lang"
+                             id="wpforms-4201-field_59_2"
+                             required="1" type="radio"
+                             value="German"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_59_2">
+                          German
+                      </label>
+                  </li>
+                  <li class="choice-3 depth-1">
+                      <input name="stu_second_lang"
+                             id="wpforms-4201-field_59_3"
+                             required="1" type="radio"
+                             value="Other"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_59_3">
+                          Other
+                      </label>
+                  </li>
+              </ul>
+          </div>
+          <div class="wpforms-field wpforms-field-text wpforms-conditional-field wpforms-conditional-hide"
+               id="wpforms-4201-field_144-container"
+               style="display: none;"
+               data-field-id="144">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_144">
+                  Please Specify
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <input name="stu_specify"
+                     class="wpforms-field-small wpforms-field-required"
+                     id="wpforms-4201-field_144"
+                     required="1" type="text"/>
+          </div>
+          <div class="wpforms-field wpforms-field-radio wpforms-list-inline wpforms-conditional-trigger"
+               id="wpforms-4201-field_146-container"
+               data-field-id="146">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_146">Does
+                  your child require special
+                  accommodation?
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <ul class="wpforms-field-required"
+                  id="wpforms-4201-field_146">
+                  <li class="choice-1 depth-1">
+                      <input name="stu_accommodation"
+                             id="wpforms-4201-field_146_1"
+                             required="1" type="radio"
+                               value="Yes"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_146_1">
+                          Yes
+                      </label>
+                  </li>
+                  <li class="choice-2 depth-1">
+                      <input name="stu_accommodation"
+                             id="wpforms-4201-field_146_2"
+                             required="1" type="radio"
+                             value="No"/>
+                      <label class="wpforms-field-label-inline"
+                             for="wpforms-4201-field_146_2">
+                          No
+                      </label>
+                  </li>
+              </ul>
+          </div>
+          <div class="wpforms-field wpforms-field-textarea wpforms-conditional-field wpforms-conditional-hide"
+               id="wpforms-4201-field_41-container"
+               style="display: none;"
+               data-field-id="41">
+              <label class="wpforms-field-label"
+                     for="wpforms-4201-field_41">
+                  Please Specify
+                  <span class="wpforms-required-label">
+                      *
+                  </span>
+              </label>
+              <textarea name="wpforms[fields][41]"
+                        class="wpforms-field-medium wpforms-field-required"
+                        id="wpforms-4201-field_41"
+                        required="1"></textarea>
+          </div>
+          <div class="wpforms-field wpforms-field-pagebreak"
+               id="wpforms-4201-field_145-container"
+               data-field-id="145">
+              <div class="wpforms-clear wpforms-pagebreak-left">
+                  <button class="wpforms-page-button wpforms-page-prev"
+                          data-formid="4201"
+                          data-page="2"
+                          id="page_prev"
+                          type="button"
+                          data-action="prev">Previous
+
+                  </button>
+                  <button class="wpforms-page-button wpforms-page-next"
+                          data-formid="4201"
+                          id="page12"
+                          type="button"
+                          data-page="2"
+                          data-action="next">Next
+                  </button>
+                 
+              </div>
+          </div>
+      </div>
+      <!--end-->
+      <!--page3-->
+      <div class="wpforms-page wpforms-page-3  " style="display:none;"
+             >
+              <button class="wpforms-page-button wpforms-page-next"
+						id="skip_42013"
+						data-formid="42013"
+						data-page="1"
+						type="button"
+						data-action="skip">Skip
+				</button>
+            <div class="wpforms-field wpforms-field-divider"
+                 id="wpforms-4201-field_39-container"
+                 data-field-id="39">
+                <h3 id="wpforms-4201-field_39"
+                    name="wpforms[fields][39]">Father
+                    Contact Details
+                </h3>
+            </div>
+            <div class="wpforms-field wpforms-field-name"
+                 id="wpforms-4201-field_20-container"
+                 data-field-id="20">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_20">Name
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <div class="wpforms-field-row wpforms-field-medium">
+                    <div class="wpforms-field-row-block wpforms-first wpforms-one-half">
+                        <input name="fname_first"
+                               class="wpforms-field-name-first wpforms-field-required"
+                               id="wpforms-4201-field_20"
+                               required="1" type="text"/>
+                        <label class="wpforms-field-sublabel before "
+                               for="wpforms-4201-field_20">
+                            First
+                        </label>
+                    </div>
+                    <div class="wpforms-field-row-block wpforms-one-half">
+                        <input name="flast_name"
+                               class="wpforms-field-name-last wpforms-field-required"
+                               id="wpforms-4201-field_20-last"
+                               required="1" type="text"/>
+                        <label class="wpforms-field-sublabel before "
+                               for="wpforms-4201-field_20-last">
+                            Last
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="wpforms-field wpforms-field-email"
+                 id="wpforms-4201-field_147-container"
+                 data-field-id="147">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_147">
+                    Email
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <div class="wpforms-field-row wpforms-field-medium">
+                    <div class="wpforms-field-row-block wpforms-one-half wpforms-first">
+                        <input name="femail_primary"
+                               class="wpforms-field-required wpforms-field-email-primary wpforms-novalidate-onkeyup"
+                               id="wpforms-4201-field_147"
+                               required="1" type="email"
+                               data-rule-unique="true"/>
+                        <label class="wpforms-field-sublabel before "
+                               for="wpforms-4201-field_147">
+                            Email
+                        </label>
+                    </div>
+                    <div class="wpforms-field-row-block wpforms-one-half">
+                        <input name="femail_secondary"
+                               class="wpforms-field-email-secondary wpforms-field-required"
+                               id="wpforms-4201-field_147-secondary"
+                               required="1" type="email"
+                               data-rule-confirm="#wpforms-4201-field_147"/>
+                        <label class="wpforms-field-sublabel before "
+                               for="wpforms-4201-field_147-secondary">
+                            Confirm Email
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="wpforms-field wpforms-field-phone wpforms-one-half wpforms-first"
+                 id="wpforms-4201-field_148-container"
+                 data-field-id="148">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_148">
+                    Mobile Number
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                 <input name="fmobile_number"
+                       class="wpforms-field-large wpforms-field-required wpforms-novalidate-onkeyup"
+                       id="wpforms-4201-field_701"
+                       required="" type="tel"
+                       data-rule-unique="true"/>
+
+            </div>
+            <div class="wpforms-field wpforms-field-phone wpforms-one-half"
+                 id="wpforms-4201-field_70-container"
+                 data-field-id="70">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_70">Home
+                    Phone
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <input name="fhome_phone"
+                       class="wpforms-field-large wpforms-field-required wpforms-novalidate-onkeyup"
+                       id="wpforms-4201-field_70"
+                       required="" type="tel"
+                       data-rule-unique="true"/>
+            </div>
+            <div class="wpforms-field wpforms-field-radio wpforms-list-inline wpforms-conditional-trigger"
+                 id="wpforms-4201-field_149-container"
+                 data-field-id="149">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_149">
+                    Nationality
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <ul class="wpforms-field-required"
+                    id="wpforms-4201-field_149">
+                    <li class="choice-1 depth-1">
+                        <input name="fnationality"
+                               id="wpforms-4201-field_149_1"
+                               required="1" type="radio"
+                               value="Egyptian"/>
+                        <label class="wpforms-field-label-inline"
+                               for="wpforms-4201-field_149_1">
+                            Egyptian
+                        </label>
+                    </li>
+                    <li class="choice-2 depth-1">
+                        <input name="fnationality"
+                               id="wpforms-4201-field_149_2"
+                               required="1" type="radio"
+                               value="non-Egyptian"/>
+                        <label class="wpforms-field-label-inline"
+                               for="wpforms-4201-field_149_2">
+                            non-Egyptian
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="wpforms-field wpforms-field-text wpforms-conditional-field wpforms-conditional-hide"
+                 id="wpforms-4201-field_150-container"
+                 style="display: none;"
+                 data-field-id="150">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_150">
+                    National ID
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <input name="fnational_id"
+                       class="wpforms-field-small wpforms-field-required wpforms-masked-input wpforms-masked-input wpforms-novalidate-onkeyup"
+                       id="wpforms-4201-field_150"
+                       required="1" type="text"
+                       data-inputmask-mask="99999999999999"
+                       data-rule-unique="true"
+                       im-insert="true"/>
+            </div>
+            <div class="wpforms-field wpforms-field-text wpforms-conditional-field wpforms-conditional-hide"
+                 id="wpforms-4201-field_151-container"
+                 style="display: none;"
+                 data-field-id="151">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_151">
+                    Passport No.
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <input name="fpassport"
+                       class="wpforms-field-small wpforms-field-required wpforms-novalidate-onkeyup"
+                       id="wpforms-4201-field_151"
+                       required="1" type="text"
+                       data-rule-unique="true"/>
+            </div>
+            <div class="wpforms-field wpforms-field-text"
+                 id="wpforms-4201-field_69-container"
+                 data-field-id="69">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_69">Home
+                    Address
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <input name="fhome_address"
+                       class="wpforms-field-medium wpforms-field-required"
+                       id="wpforms-4201-field_69"
+                       required="1" type="text"/>
+            </div>
+            <div class="wpforms-field wpforms-field-text"
+                 id="wpforms-4201-field_71-container"
+                 data-field-id="71">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_71">
+                    Educational Degree
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <input name="feducational_degree"
+                       class="wpforms-field-small wpforms-field-required"
+                       id="wpforms-4201-field_71"
+                       required="1" type="text"/>
+            </div>
+            <div class="wpforms-field wpforms-field-text"
+                 id="wpforms-4201-field_65-container"
+                 data-field-id="65">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_65">
+                    Occupation
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <input name="foccupation"
+                       class="wpforms-field-small wpforms-field-required"
+                       id="wpforms-4201-field_65"
+                       required="1" type="text"/>
+            </div>
+            <div class="wpforms-field wpforms-field-text"
+                 id="wpforms-4201-field_28-container"
+                 data-field-id="28">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_28">
+                    Company / Organization Name
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <input name="mcompany_name"
+                       class="wpforms-field-small wpforms-field-required"
+                       id="wpforms-4201-field_28"
+                       required="1" type="text"/>
+            </div>
+            <div class="wpforms-field wpforms-field-radio"
+                 id="wpforms-4201-field_72-container"
+                 data-field-id="72">
+                <label class="wpforms-field-label"
+                       for="wpforms-4201-field_72">
+                    English Language Proficiency
+                    <span class="wpforms-required-label">
+                        *
+                    </span>
+                </label>
+                <ul class="wpforms-field-required"
+                    id="wpforms-4201-field_72">
+                    <li class="choice-1 depth-1">
+                        <input name="english_language"
+                               id="wpforms-4201-field_72_1"
+                               required="1" type="radio"
+                               value="Excellent"/>
+                        <label class="wpforms-field-label-inline"
+                               for="wpforms-4201-field_72_1">
+                            Excellent
+                        </label>
+                    </li>
+                    <li class="choice-2 depth-1">
+                        <input name="english_language"
+                               id="wpforms-4201-field_72_2"
+                               required="1" type="radio"
+                               value="Very good"/>
+                        <label class="wpforms-field-label-inline"
+                               for="wpforms-4201-field_72_2">
+                            Very good
+                        </label>
+                    </li>
+                    <li class="choice-3 depth-1">
+                        <input name="english_language"
+                               id="wpforms-4201-field_72_3"
+                               required="1" type="radio"
+                               value="Fair"/>
+                        <label class="wpforms-field-label-inline"
+                               for="wpforms-4201-field_72_3">
+                            Fair
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="wpforms-field wpforms-field-pagebreak"
+                 id="wpforms-4201-field_15-container"
+                 data-field-id="15">
+                <div class="wpforms-clear wpforms-pagebreak-left">
+                    <button class="wpforms-page-button wpforms-page-prev"
+                            data-formid="4201"
+                            data-page="3"
+                            id="page13_prev"
+                            type="button"
+                            data-action="prev">Previous
+                    </button>
+                    <button class="wpforms-page-button wpforms-page-next"
+                            data-formid="4201"
+                            data-page="3"
+                            id="page13"
+                            type="button"
+                            data-action="next">Next
+                    </button>
+                   
+                </div>
+            </div>
+        </div>
+
+
+<!--end -->
+                            
+<!--page4-->
+ <div class="wpforms-page wpforms-page-4  " style="display:none;"
+     >
+     <button class="wpforms-page-button wpforms-page-next"
+				id="skip_42014"
+				data-formid="42014"
+				data-page="1"
+				type="button"
+				data-action="skip">Skip
+	</button>
+    <div class="wpforms-field wpforms-field-divider"
+         id="wpforms-4201-field_152-container"
+         data-field-id="152">
+        <h3 id="wpforms-4201-field_152"
+            name="wpforms[fields][152]">Mother
+            Contact Details
+        </h3>
+    </div>
+    <div class="wpforms-field wpforms-field-name"
+         id="wpforms-4201-field_153-container"
+         data-field-id="153">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_153">Name
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <div class="wpforms-field-row wpforms-field-medium">
+            <div class="wpforms-field-row-block wpforms-first wpforms-one-half">
+                <input name="first_name"
+                       class="wpforms-field-name-first wpforms-field-required"
+                       id="wpforms-4201-field_153"
+                       required="1" type="text"/>
+                <label class="wpforms-field-sublabel before "
+                       for="wpforms-4201-field_153">
+                    First
+                </label>
+            </div>
+            <div class="wpforms-field-row-block wpforms-one-half">
+                <input name="last_name"
+                       class="wpforms-field-name-last wpforms-field-required"
+                       id="wpforms-4201-field_153-last"
+                       required="1" type="text"/>
+                <label class="wpforms-field-sublabel before "
+                       for="wpforms-4201-field_153-last">
+                    Last
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="wpforms-field wpforms-field-email"
+         id="wpforms-4201-field_154-container"
+         data-field-id="154">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_154">
+            Email
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <div class="wpforms-field-row wpforms-field-medium">
+            <div class="wpforms-field-row-block wpforms-one-half wpforms-first">
+                <input name="primary_email"
+                       class="wpforms-field-required wpforms-field-email-primary wpforms-novalidate-onkeyup"
+                       id="wpforms-4201-field_154"
+                       required="1" type="email"
+                       data-rule-unique="true"/>
+                <label class="wpforms-field-sublabel before "
+                       for="wpforms-4201-field_154">
+                    Email
+                </label>
+            </div>
+            <div class="wpforms-field-row-block wpforms-one-half">
+                <input name="secondary_email"
+                       class="wpforms-field-email-secondary wpforms-field-required"
+                       id="wpforms-4201-field_154-secondary"
+                       required="1" type="email"
+                       data-rule-confirm="#wpforms-4201-field_154"/>
+                <label class="wpforms-field-sublabel before "
+                       for="wpforms-4201-field_154-secondary">
+                    Confirm Email
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="wpforms-field wpforms-field-phone wpforms-one-half wpforms-first"
+         id="wpforms-4201-field_155-container"
+         data-field-id="155">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_155">
+            Mobile Number
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+         <input name="mmobile_number"
+               class="wpforms-field-large wpforms-field-required wpforms-novalidate-onkeyup"
+               id="wpforms-4201-field_177"
+               required="1" type="tel"
+               data-rule-unique="true"/>
+    </div>
+    <div class="wpforms-field wpforms-field-phone wpforms-one-half"
+         id="wpforms-4201-field_156-container"
+         data-field-id="156">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_156">Home
+            Phone
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <input name="home_phone"
+               class="wpforms-field-large wpforms-field-required wpforms-novalidate-onkeyup"
+               id="wpforms-4201-field_156"
+               required="1" type="tel"
+               data-rule-unique="true"/>
+    </div>
+    <div class="wpforms-field wpforms-field-radio wpforms-list-inline wpforms-conditional-trigger"
+         id="wpforms-4201-field_157-container"
+         data-field-id="157">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_157">
+            Nationality
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <ul class="wpforms-field-required"
+            id="wpforms-4201-field_157">
+            <li class="choice-1 depth-1">
+                <input name="nationality_mother"
+                       id="wpforms-4201-field_157_1"
+                       required="1" type="radio"
+                       value="Egyptian"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_157_1">
+                    Egyptian
+                </label>
+            </li>
+            <li class="choice-2 depth-1">
+                <input name="nationality_mother"
+                       id="wpforms-4201-field_157_2"
+                       required="1" type="radio"
+                       value="non-Egyptian"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_157_2">
+                    non-Egyptian
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="wpforms-field wpforms-field-text wpforms-conditional-field wpforms-conditional-hide"
+         id="wpforms-4201-field_158-container"
+         style="display: none;"
+         data-field-id="158">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_158">
+            National ID
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <input name="nationality_id"
+               class="wpforms-field-small wpforms-field-required wpforms-masked-input wpforms-masked-input wpforms-novalidate-onkeyup"
+               id="wpforms-4201-field_158"
+               required="1" type="text"
+               data-inputmask-mask="99999999999999"
+               data-rule-unique="true"
+               im-insert="true"/>
+    </div>
+    <div class="wpforms-field wpforms-field-text wpforms-conditional-field wpforms-conditional-hide"
+         id="wpforms-4201-field_159-container"
+         style="display: none;"
+         data-field-id="159">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_159">
+            Passport No.
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <input name="passport_no"
+               class="wpforms-field-small wpforms-field-required wpforms-novalidate-onkeyup"
+               id="wpforms-4201-field_159"
+               required="1" type="text"
+               data-rule-unique="true"/>
+    </div>
+    <div class="wpforms-field wpforms-field-text"
+         id="wpforms-4201-field_160-container"
+         data-field-id="160">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_160">Home
+            Address
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <input name="home_address"
+               class="wpforms-field-medium wpforms-field-required"
+               id="wpforms-4201-field_160"
+               required="1" type="text"/>
+    </div>
+    <div class="wpforms-field wpforms-field-text"
+         id="wpforms-4201-field_161-container"
+         data-field-id="161">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_161">
+            Educational Degree
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <input name="educational_degree"
+               class="wpforms-field-small wpforms-field-required"
+               id="wpforms-4201-field_161"
+               required="1" type="text"/>
+    </div>
+    <div class="wpforms-field wpforms-field-text"
+         id="wpforms-4201-field_162-container"
+         data-field-id="162">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_162">
+            Occupation
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <input name="occupation"
+               class="wpforms-field-small wpforms-field-required"
+               id="wpforms-4201-field_162"
+               required="1" type="text"/>
+    </div>
+    <div class="wpforms-field wpforms-field-text"
+         id="wpforms-4201-field_163-container"
+         data-field-id="163">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_163">
+            Company / Organization Name
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <input name="campany_organization"
+               class="wpforms-field-small wpforms-field-required"
+               id="wpforms-4201-field_163"
+               required="1" type="text"/>
+    </div>
+    <div class="wpforms-field wpforms-field-radio"
+         id="wpforms-4201-field_164-container"
+         data-field-id="164">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_164">
+            English Language Proficiency
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <ul class="wpforms-field-required"
+            id="wpforms-4201-field_164">
+            <li class="choice-1 depth-1">
+                <input name="english_language"
+                       id="wpforms-4201-field_164_1"
+                       required="1" type="radio"
+                       value="Excellent"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_164_1">
+                    Excellent
+                </label>
+            </li>
+            <li class="choice-2 depth-1">
+                <input name="english_language"
+                       id="wpforms-4201-field_164_2"
+                       required="1" type="radio"
+                       value="Very good"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_164_2">
+                    Very good
+                </label>
+            </li>
+            <li class="choice-3 depth-1">
+                <input name="english_language"
+                       id="wpforms-4201-field_164_3"
+                       required="1" type="radio"
+                       value="Fair"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_164_3">
+                    Fair
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="wpforms-field wpforms-field-radio wpforms-conditional-trigger"
+         id="wpforms-4201-field_165-container"
+         data-field-id="165">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_165">
+            Marital Status
+        </label>
+        <ul id="wpforms-4201-field_165">
+            <li class="choice-1 depth-1">
+                <input name="marital_status"
+                       id="wpforms-4201-field_165_1"
+                       type="radio"
+                       value="Married"
+                       required="1"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_165_1">
+                    Married
+                </label>
+            </li>
+            <li class="choice-2 depth-1">
+                <input name="marital_status"
+                       id="wpforms-4201-field_165_2"
+                       type="radio"
+                       value="Divorced"
+                       required="1"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_165_2">
+                    Divorced
+                </label>
+            </li>
+            <li class="choice-3 depth-1">
+                <input name="marital_status"
+                       id="wpforms-4201-field_165_3"
+                       type="radio"
+                       value="Widow"
+                       required="1"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_165_3">
+                    Widow
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="wpforms-field wpforms-field-radio wpforms-conditional-field wpforms-conditional-trigger wpforms-conditional-hide"
+         id="wpforms-4201-field_92-container"
+         style="display: none;"
+         data-field-id="92">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_92">Legal
+            guardian
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <ul class="wpforms-field-required"
+            id="wpforms-4201-field_92">
+            <li class="choice-1 depth-1">
+                <input name="legal_guardian"
+                       id="wpforms-4201-field_92_1"
+                       required="1" type="radio"
+                       value="Father"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_92_1">
+                    Father
+                </label>
+            </li>
+            <li class="choice-2 depth-1">
+                <input name="legal_guardian"
+                       id="wpforms-4201-field_92_2"
+                       required="1" type="radio"
+                       value="Mother"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_92_2">
+                    Mother
+                </label>
+            </li>
+            <li class="choice-3 depth-1">
+                <input name="legal_guardian"
+                       id="wpforms-4201-field_92_3"
+                       required="1" type="radio"
+                       value="Other"/>
+                <label class="wpforms-field-label-inline"
+                       for="wpforms-4201-field_92_3">
+                    Other
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="wpforms-field wpforms-field-text wpforms-conditional-field wpforms-conditional-hide"
+         id="wpforms-4201-field_93-container"
+         style="display: none;"
+         data-field-id="93">
+        <label class="wpforms-field-label"
+               for="wpforms-4201-field_93">Other
+            Legal guardian
+            <span class="wpforms-required-label">
+                *
+            </span>
+        </label>
+        <input name="other_legal"
+               class="wpforms-field-large wpforms-field-required"
+               id="wpforms-4201-field_93"
+               required="1" type="text"/>
+    </div>
+    <div class="wpforms-field wpforms-field-pagebreak"
+         id="wpforms-4201-field_166-container"
+         data-field-id="166">
+        <div class="wpforms-clear wpforms-pagebreak-left">
+            <button class="wpforms-page-button wpforms-page-prev"
+                    data-formid="4201"
+                    data-page="4"
+                    id="page14_prev"
+                    type="button"
+                    data-action="prev">Previous
+            </button>
+            <button class="wpforms-page-button wpforms-page-next"
+                    data-formid="4201"
+                    data-page="4"
+                    id="page14"
+                    type="button"
+                    data-action="next">Next
+
+            </button>
+            
+        </div>
+    </div>
+</div>
+
+<!--end-->
+<!--page5-->
+<div class="wpforms-page wpforms-page-5 last" style="display:none;"
+       >
+      <div class="wpforms-field wpforms-field-divider"
+           id="wpforms-4201-field_95-container"
+           data-field-id="95">
+          <h3 id="wpforms-4201-field_95"
+              name="wpforms[fields][95]">Emergency
+              Contacts
+          </h3>
+      </div>
+      <div class="wpforms-field wpforms-field-text"
+           id="wpforms-4201-field_96-container"
+           data-field-id="96">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_96">
+              Primary Contact Name
+              <span class="wpforms-required-label">
+                  *
+              </span>
+          </label>
+          <input name="primary_contact"
+                 class="wpforms-field-medium wpforms-field-required"
+                 id="wpforms-4201-field_96"
+                 required="1" type="text"/>
+      </div>
+      <div class="wpforms-field wpforms-field-phone"
+           id="wpforms-4201-field_97-container"
+           data-field-id="97">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_97">
+              Primary Contact Mobile Phone
+              <span class="wpforms-required-label">
+                  *
+              </span>
+          </label>
+          <input name="emergency_contact_mobile"
+                 class="wpforms-field-medium wpforms-field-required"
+                 id="wpforms-4201-field_981"
+                 required="1" type="text"/>
+      </div>
+      <div class="wpforms-field wpforms-field-text"
+           id="wpforms-4201-field_98-container"
+           data-field-id="98">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_98">
+              Primary Contact Relation to Student
+              <span class="wpforms-required-label">
+                  *
+              </span>
+          </label>
+          <input name="primary_contact_student"
+                 class="wpforms-field-medium wpforms-field-required"
+                 id="wpforms-4201-field_98"
+                 required="1" type="text"/>
+      </div>
+      <div class="wpforms-field wpforms-field-text"
+           id="wpforms-4201-field_99-container"
+           data-field-id="99">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_99">
+              Secondary Contact Name
+              <span class="wpforms-required-label">
+                  *
+              </span>
+          </label>
+          <input name="secondary_contact_name"
+                 class="wpforms-field-medium wpforms-field-required"
+                 id="wpforms-4201-field_99"
+                 required="1" type="text"/>
+      </div>
+      <div class="wpforms-field wpforms-field-phone"
+           id="wpforms-4201-field_102-container"
+           data-field-id="102">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_102">
+              Secondary Contact Mobile Phone
+              <span class="wpforms-required-label">
+                  *
+              </span>
+          </label>
+            <input name="secondary_contact_mobile"
+                 class="wpforms-field-medium wpforms-field-required"
+                 id="wpforms-4201-field_1031"
+                 required="1" type="text"/>
+      </div>
+      <div class="wpforms-field wpforms-field-text"
+           id="wpforms-4201-field_103-container"
+           data-field-id="103">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_103">
+              Secondary Contact Relation to
+              Student
+              <span class="wpforms-required-label">
+                  *
+              </span>
+          </label>
+          <input name="secondary_contact"
+                 class="wpforms-field-medium wpforms-field-required"
+                 id="wpforms-4201-field_103"
+                 required="1" type="text"/>
+      </div>
+      <div class="wpforms-field wpforms-field-divider"
+           id="wpforms-4201-field_105-container"
+           data-field-id="105">
+          <h3 id="wpforms-4201-field_105"
+              name="wpforms[fields][105]">
+              Sibling(s) Details
+          </h3>
+      </div>
+      <div class="wpforms-field wpforms-field-checkbox wpforms-list-inline wpforms-conditional-trigger"
+           id="wpforms-4201-field_107-container"
+           data-field-id="107">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_107">
+              Applicant’s Sibling
+              <span class="wpforms-required-label">
+                  *
+              </span>
+          </label>
+          <ul class="wpforms-field-required"
+              id="wpforms-4201-field_107">
+              <li class="choice-1 depth-1">
+                  <input name="applicant_sibling"
+                         id="wpforms-4201-field_107_1"
+                         type="checkbox"
+                         value="Yes"/>
+                  <label class="wpforms-field-label-inline"
+                         for="wpforms-4201-field_107_1">
+                      Yes
+                  </label>
+              </li>
+              <li class="choice-2 depth-1">
+                  <input name="applicant_sibling"
+                         id="wpforms-4201-field_107_2"
+                         type="checkbox"
+                         value="No"/>
+                  <label class="wpforms-field-label-inline"
+                         for="wpforms-4201-field_107_2">
+                      No
+                  </label>
+              </li>
+          </ul>
+      </div>
+      <div class="wpforms-field wpforms-field-text wpforms-one-half wpforms-first wpforms-conditional-field wpforms-conditional-hide"
+           id="wpforms-4201-field_108-container"
+           style="display: none;"
+           data-field-id="108">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_108">
+              Sibling Name
+          </label>
+          <input name="sibling_name"
+                 class="wpforms-field-medium"
+                 id="wpforms-4201-field_108"
+                 type="text"
+                 required="1"/>
+      </div>
+      <div class="wpforms-field wpforms-field-text wpforms-one-half wpforms-conditional-field wpforms-conditional-hide"
+           id="wpforms-4201-field_110-container"
+           style="display: none;"
+           data-field-id="110">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_110">
+              Sibling Grade level
+          </label>
+          <input name="grade_level"
+                 class="wpforms-field-medium"
+                 id="wpforms-4201-field_110"
+                 type="text"
+                 required="1"/>
+      </div>
+      <div class="wpforms-field wpforms-field-text wpforms-one-half wpforms-first wpforms-conditional-field wpforms-conditional-hide"
+           id="wpforms-4201-field_167-container"
+           style="display: none;"
+           data-field-id="167">
+          <label class="wpforms-field-label"
+                 for="wpforms-4201-field_167">
+              Sibling School
+          </label>
+          <input name="sibling_school"
+                 class="wpforms-field-medium"
+                 id="wpforms-4201-field_167"
+                 type="text"
+                 required="1"/>
+      </div>
+      <div class="wpforms-field wpforms-field-checkbox wpforms-list-inline"
+           id="wpforms-4201-field_170-container"
+           data-field-id="170">
+          <ul class="wpforms-field-required"
+              id="wpforms-4201-field_170">
+              <li class="choice-1 depth-1">
+                  <input name="condition"
+                         id="wpforms-4201-field_170_1"
+                         type="checkbox"
+                         value=" I confirm that the information given in this form is correct and accurate."/>
+                  <label class="wpforms-field-label-inline"
+                         for="wpforms-4201-field_170_1">
+                      I confirm that the
+                      information given in this
+                      form is correct and
+                      accurate.
+                  </label>
+              </li>
+          </ul>
+      </div>
+      <div class="wpforms-field wpforms-field-pagebreak"
+           id="wpforms-4201-field_17-container"
+           data-field-id="17">
+          <div class="wpforms-clear wpforms-pagebreak-left"></div>
+      </div>
+ <button class="wpforms-page-button wpforms-page-prev"
+                    data-formid="4201"
+                    data-page="5"
+                    id="page15_prev"
+                    type="button"
+                    data-action="prev">Previous
+            </button>
+   <input class="wpforms-page-button wpforms-page-next"
+                            data-formid="4201"
+                            data-page="3"
+                            id="page15"
+                            type="submit"
+                            data-action="next" value="Submit"/>
+
+  </div>
+                    <!-- </button> -->
+<!--end-->
+																		</form>
+																</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="vc_row-full-width vc_clearfix"></div>
+										</div>
+									</article>
+								</main><!-- /main -->
+							</div>
+						</div><!-- /content -->
+					</div>
+				</xpath>
+			</field>
+	</record>
+</data>
+</odoo>
