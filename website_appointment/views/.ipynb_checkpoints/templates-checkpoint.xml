@@ -8,8 +8,8 @@
 			<field name="arch" type="xml">
 				<xpath expr="//div[@id='wrap']" position="replace">
 					<!-- CSS and JavaScript Imports -->
-					<link rel="stylesheet" href="/websit_appointment/static/css/main.css"/>
-					<link rel="stylesheet" href="/websit_appointment/static/css/style.css"/>
+					<link rel="stylesheet" href="/website_appointment/static/css/main.css"/>
+					<link rel="stylesheet" href="/website_appointment/static/css/style.css"/>
 					
 			<!-- 		<script type="text/javascript" src="/websit_appointment/static/js/javascript.js"></script> -->
 					<div id="wrapper">

@@ -2,7 +2,7 @@
 	<template id="assets_frontend" inherit_id="website.assets_frontend" name="Shop">
         <xpath expr="." position="inside">
 			<meta name="viewport" content="width=device-width, initial-scale=1"/>
-			<script type="text/javascript" src="/websit_appointment/static/js/javascript.js"></script>
+			<script type="text/javascript" src="/website_appointment/static/js/javascript.js"></script>
  
 
 		</xpath>
